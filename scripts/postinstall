@@ -5,7 +5,7 @@ DIR=$(pwd)
 mkdir -p packages/steem-js packages/steemconnect
 
 # fetch modified steem-js
-cd $DIR/packages_test/steemconnect
+cd $DIR/packages/steemconnect
 git init
 git remote add origin https://github.com/kareniel/steemconnect
 git fetch origin 1957bda4f13c1a3b6b40e2dd2316233f236c229f
@@ -14,7 +14,7 @@ npm install
 npm link
 
 # fetch modified steemconnect and make it use modified steem-js
-cd $DIR/packages_test/steem-js
+cd $DIR/packages/steem-js
 git init
 git remote add origin https://github.com/kareniel/steem-js
 git fetch origin ef4796d3158ad4e8b54fe203113ba5c9a81728b7
