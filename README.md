@@ -6,6 +6,9 @@ NB: This is a work in progress
 
 ## Install
 
+Make sure to copy `sample.env` to `.env` and to make the appropriate changes to
+the file so the config fits your particular setup.
+
 ```
 mkdir testnet-connect
 cd testnet-connect
