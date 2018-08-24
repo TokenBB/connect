@@ -1,0 +1,16 @@
+{
+  "name": "@tokenbb/connect",
+  "version": "1.0.0",
+  "description": "local steemconnect instance",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bash scripts/postinstall",
+    "wif": "node scripts/wif"
+  },
+  "author": "kareniel",
+  "license": "MIT",
+  "dependencies": {
+    "@steemit/steem-js": "^0.7.1",
+    "dotenv": "^6.0.0"
+  }
+}

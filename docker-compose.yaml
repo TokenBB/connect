@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - '5432:5432'
+
+  steemconnect:
+    links:
+      - postgres
+    build:
+      context: .
+      args:
+        - STEEMD_URL
+    ports:
+      - '3000:80'
+    environment:
+      - STEEMD_URL
+      - STEEMD_URL_SERVER
+      - BROADCASTER_USERNAME
+      - BROADCASTER_POSTING_WIF
+      - JWT_SECRET
+      - DEBUG
+      - DATABASE_URL
+      - CSP_DEFAULT
+      - CSP_SCRIPT_SRC
+      - CSP_CONNECT_SRC
+      - CSP_FRAME_SRC
+      - CSP_STYLE_SRC
+      - CSP_IMG_SRC
+      - CSP_FONT_SRC
+      - CHAIN_PREFIX
+      - CHAIN_ID
