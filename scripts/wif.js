@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Get the 'posting' WIF from a given username and password
+
 var args = process.argv.slice(2)
 
 if (args.length < 2) {
